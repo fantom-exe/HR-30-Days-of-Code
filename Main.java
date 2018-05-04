@@ -1,12 +1,12 @@
-import Day03
-		.Solution;
+import Day04
+		.*;
 
 public class Main {
 
 	public static void main(String[] args) {
 		String[] strArgs = new String[0];
 		
-		Solution.main(strArgs);
+		Person.main(strArgs);
 		
 	}
 }
