@@ -10,18 +10,25 @@ public class Solution {
 		Map<String, Integer> phoneBook = new HashMap<String, Integer>();
 		Scanner in = new Scanner(System.in);
 		
-		int n = in.nextInt(); // number of inputs
-		for(int i = 0; i < n; i++){
+		// additions
+		int numOfInputs = in.nextInt();
+		for(int i = 0; i < numOfInputs; i++){
 			String name = in.next();
 			int phone = in.nextInt();
 			
 			phoneBook.put(name, phone);
 		}
 		
+		// searching
 		while(in.hasNext()){
-			String s = in.next();
+			String str = in.next();
 			
-			
+			if(phoneBook.containsKey(str)) {
+				System.out.println(str + "=" + phoneBook.get(str));
+			}
+			else {
+				System.out.println("Not found");
+			}
 		}
 		in.close();
 		
