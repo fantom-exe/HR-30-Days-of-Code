@@ -10,7 +10,7 @@ public class Solution {
 	// Complete the factorial function below.
 	static int factorial(int n) {
 	
-		
+	
 	}
 	
 	private static final Scanner scanner = new Scanner(System.in);
