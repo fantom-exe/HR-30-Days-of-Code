@@ -32,14 +32,22 @@ public class Solution {
 		// count number of consecutive 1's
 		int consecutiveBinaryNums = 0,
 			binaryNum = -1;
+		boolean isConsecutive = false;
 		for (int i = 0; i < stackSize; i++) {
 			binaryNum = binaryRep.pop();
 			
 			if(binaryNum == 1) {
-				consecutiveBinaryNums += 1;
+				if(consecutiveBinaryNums == 0) {
+					consecutiveBinaryNums = 0;
+					consecutiveBinaryNums += 1;
+					isConsecutive = true;
+				}
+				else {
+					consecutiveBinaryNums += 1;
+				}
 			}
-			else if (binaryNum == 0 && consecutiveBinaryNums > 0) {
-				break;
+			else if (binaryNum == 0) {
+				isConsecutive = false;
 			}
 		}
 		
