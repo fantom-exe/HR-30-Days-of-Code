@@ -1,6 +1,7 @@
 package Day10;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Solution {
 	
@@ -12,18 +13,36 @@ public class Solution {
 		scanner.close();
 		
 		// find binary representation
-		int[] binaryRep = new int[15];
+		Stack<Integer> binaryRep = new Stack<Integer>();
 		
-		for (int i = n%2; i < n; i++) { // fix
-			binaryRep[i] = n%2;
-			n--;
+		int stackSize = 0;
+		while(n > 0) {
+			binaryRep.push(n%2);
+			
+			n /= 2;
+			
+			stackSize++;
 		}
 		
 		// count number of consecutive 1's
-		int numOfBin = binaryRep.length;
+		int numOfBin = 0;
+		
+		for (int i = 0; i < binaryRep.; i++) {
+			if(binaryRep[i] == 1) {
+				numOfBin += 1;
+				for (int j = i; j < binaryRep.length; j++) {
+					if(binaryRep[j] == 1) {
+						numOfBin += 1;
+					}
+					else {
+						break;
+					}
+				}
+			}
+		}
 		
 		// print result
-		System.out.println(numOfBin);
+//		System.out.println(numOfBin);
 	}
 
 }
