@@ -22,27 +22,29 @@ public class Solution {
 			n /= 2;
 			
 			stackSize++;
+			
+			if(n == 0) {
+				binaryRep.push(n%2);
+				break;
+			}
 		}
 		
 		// count number of consecutive 1's
-		int numOfBin = 0;
-		
-		for (int i = 0; i < binaryRep.; i++) {
-			if(binaryRep[i] == 1) {
-				numOfBin += 1;
-				for (int j = i; j < binaryRep.length; j++) {
-					if(binaryRep[j] == 1) {
-						numOfBin += 1;
-					}
-					else {
-						break;
-					}
-				}
+		int consecutiveBinaryNums = 0,
+			binaryNum = -1;
+		for (int i = 0; i < stackSize; i++) {
+			binaryNum = binaryRep.pop();
+			
+			if(binaryNum == 1) {
+				consecutiveBinaryNums += 1;
+			}
+			else if (binaryNum == 0 && consecutiveBinaryNums > 0) {
+				break;
 			}
 		}
 		
 		// print result
-//		System.out.println(numOfBin);
+		System.out.println(consecutiveBinaryNums);
 	}
 
 }
