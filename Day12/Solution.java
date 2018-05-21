@@ -2,7 +2,7 @@ package Day12;
 
 import java.util.Scanner;
 
-class Solution {
+public class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String firstName = scan.next();
