@@ -23,28 +23,28 @@ public class Solution {
 		scanner.close();
 		
 		// find hourglasses and sums
-		int rowSum1 = 0, rowSum2 = 0, rowSum3 = 0; // individual sums of each hourglass row
+		int rowSum1, rowSum2, rowSum3; // individual sums of each hourglass row
 		int currentHourglassSum, maxHourglass = 0;
 		
-		for (int i = 0; i < 4; i++) { // hourglass
-			currentHourglassSum = 0;
+		for (int i = 0; i < 4; i++) { // rows
 			
-			for (int j = 0; j < 4; j++) { // row1
-				rowSum1 = arr[i][j];
+			for (int j = 0; j < 4; j++) { // hourglasses
+				// row1
+				rowSum1 = arr[i][j] + arr[i][j+1] + arr[i][j+2];
 				
-				for (int k = 1; k < 5; k++) { // row2
-					rowSum2 = arr[i+1][k];
-					
-					for (int l = 0; l < 4; l++) { // row3
-						rowSum3 = arr[i+2][l];
-					}
+				// row2
+				rowSum2 = arr[i+1][j+1];
+				
+				// row3
+				rowSum3 = arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2];
+				
+				currentHourglassSum = rowSum1 + rowSum2 + rowSum3;
+				
+				System.out.println(currentHourglassSum);
+				
+				if (currentHourglassSum > maxHourglass || (i == 0 && j == 0)) {
+					maxHourglass = currentHourglassSum;
 				}
-			}
-			
-			currentHourglassSum = rowSum1 + rowSum2 + rowSum3;
-			
-			if(currentHourglassSum > maxHourglass) {
-				maxHourglass = currentHourglassSum;
 			}
 		}
 		
