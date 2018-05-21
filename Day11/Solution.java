@@ -23,22 +23,32 @@ public class Solution {
 		scanner.close();
 		
 		// find hourglasses and sums
-		int row1Sum, row2Sum, row3Sum; // individual sums of each hourglass row
-		int maxHourglass;
-		for (int i = 0; i < 4; i++) { // columns
+		int rowSum1 = 0, rowSum2 = 0, rowSum3 = 0; // individual sums of each hourglass row
+		int currentHourglassSum, maxHourglass = 0;
+		
+		for (int i = 0; i < 4; i++) { // hourglass
+			currentHourglassSum = 0;
 			
 			for (int j = 0; j < 4; j++) { // row1
+				rowSum1 = arr[i][j];
 				
 				for (int k = 1; k < 5; k++) { // row2
+					rowSum2 = arr[i+1][k];
 					
 					for (int l = 0; l < 4; l++) { // row3
-					
+						rowSum3 = arr[i+2][l];
 					}
 				}
 			}
+			
+			currentHourglassSum = rowSum1 + rowSum2 + rowSum3;
+			
+			if(currentHourglassSum > maxHourglass) {
+				maxHourglass = currentHourglassSum;
+			}
 		}
 		
-		// return largest sum
+		// return largest hourglass sum
 		System.out.println(maxHourglass);
 	}
 
