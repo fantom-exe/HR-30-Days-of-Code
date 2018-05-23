@@ -14,9 +14,20 @@ class Node {
 public class Solution {
 	
 	public static Node insert(Node head, int data) {
-		//Complete this method
 		Node newNode = new Node(data);
-		head.next = newNode;
+		
+		if(head == null) {
+			head = newNode;
+		}
+		else {
+			Node tempNode = head;
+			while(tempNode.next != null) {
+				tempNode = tempNode.next;
+			}
+			
+			tempNode.next = newNode;
+		}
+		
 		return head;
 	}
 	
