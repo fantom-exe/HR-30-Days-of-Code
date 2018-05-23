@@ -15,6 +15,9 @@ public class Solution {
 	
 	public static Node insert(Node head, int data) {
 		//Complete this method
+		Node newNode = new Node(data);
+		head.next = newNode;
+		return head;
 	}
 	
 	public static void display(Node head) {
