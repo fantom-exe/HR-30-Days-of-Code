@@ -1,14 +1,12 @@
 import Day21
 		.*;
 
-import java.io.IOException;
-
 public class Main {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		String[] strArgs = new String[0];
 		
-		Solution.main(strArgs);
+		Generics.main(strArgs);
 		
 	}
 	

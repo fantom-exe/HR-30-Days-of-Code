@@ -7,7 +7,10 @@ public class Printer<T> {
 	 *    Print each element of the generic array on a new line. Do not return anything.
 	 *    @param A generic array
 	 **/
-	
-	// Write your code here
+	void printArray(T[] array) {
+		for(int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
+		}
+	}
 
 }
