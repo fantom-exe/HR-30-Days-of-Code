@@ -13,6 +13,14 @@ class Node {
 
 public class Solution {
 	
+	public static int getHeight(Node root){
+		int height = 0;
+		
+		
+		
+		return height;
+	}
+	
 	public static Node insert(Node root,int data){
 		if(root==null){
 			return new Node(data);
