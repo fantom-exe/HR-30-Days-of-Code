@@ -16,15 +16,16 @@ public class Solution {
 	public static int getHeight(Node root) {
 		int leftHeight = 0, rightHeight = 0, height;
 		
-		// left height
-		if(root.left != null) {
-			leftHeight += getHeight(root.left);
+		// base case
+		if(root == null) {
+			return -1;
 		}
 		
+		// left height
+		leftHeight += getHeight(root.left);
+		
 		// right height
-		else if(root.right != null) {
-			rightHeight += getHeight(root.right);
-		}
+		rightHeight += getHeight(root.right);
 		
 		height = Math.max(leftHeight, rightHeight) + 1;
 		
