@@ -16,25 +16,25 @@ class Node{
 public class Solution {
 	
 	static void levelOrder(Node root){
-		Queue<Node> levelOrder = new LinkedList<>();
+		Queue<Node> queue = new LinkedList<>();
+		Node current;
 		
-		if(root == null) { // print
-			while(!levelOrder.isEmpty()) {
-				System.out.print(levelOrder.poll() + " ");
-			}
-		}
-		else {
-			levelOrder.add(root);
+		queue.add(root); // root
+		
+		while(!queue.isEmpty()) {
+			current = queue.poll();
 			
-			if(root.left != null) {
-//			levelOrder.add(root.left);
-				levelOrder(root.left);
+			// print
+			System.out.print(current.data + " ");
+			
+			if(current.left != null) {
+				queue.add(root.left);
 			}
 			
-			if(root.right != null) {
-//			levelOrder.add(root.right);
-				levelOrder(root.right);
+			if(current.right != null) {
+				queue.add(root.right);
 			}
+			
 			
 		}
 		
