@@ -28,13 +28,12 @@ public class Solution {
 			System.out.print(current.data + " ");
 			
 			if(current.left != null) {
-				queue.add(root.left);
+				queue.add(current.left);
 			}
 			
 			if(current.right != null) {
-				queue.add(root.right);
+				queue.add(current.right);
 			}
-			
 			
 		}
 		
