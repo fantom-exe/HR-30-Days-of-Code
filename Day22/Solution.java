@@ -13,17 +13,20 @@ class Node {
 
 public class Solution {
 	
-	public static int getHeight(Node root){
-		int height = 1;
+	int height = 0, max = 0;
+	public static int getHeight(Node root) {
 		
 		if(root.left != null) {
-			height++;
-			getHeight(root.left);
+//			height++;
+			height += getHeight(root.left);
 		}
 		else if(root.right != null) {
-			height++;
-			getHeight(root.right);
+//			height++;
+			height += getHeight(root.right);
 		}
+		
+//		max = height;
+//		if()
 		
 		return height;
 	}
