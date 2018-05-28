@@ -15,8 +15,23 @@ class Node{
 public class Solution {
 	
 	public static Node removeDuplicates(Node head) {
-	
+		Node current = head,
+			 next    = head.next;
 		
+		while(next != null) {
+			
+			if(current.data == next.data) {
+				next    = next.next;
+				current.next = next;
+			}
+			else {
+				current = next;
+				next    = next.next;
+			}
+			
+		}
+		
+		return head;
 	}
 	
 	public static  Node insert(Node head,int data)
@@ -59,4 +74,4 @@ public class Solution {
 		
 	}
 }
-}
+
