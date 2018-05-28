@@ -13,7 +13,10 @@ public class Solution {
 			int num = input.nextInt();
 			boolean prime = true;
 			
-			if(num % 2 == 0) { // even number
+			if(num == 1) {
+				prime = false;
+			}
+			else if(num % 2 == 0) { // even number
 				prime = false;
 			}
 			else {
