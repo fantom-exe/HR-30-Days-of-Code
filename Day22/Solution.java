@@ -16,7 +16,19 @@ public class Solution {
 	public static int getHeight(Node root){
 		int height = 0;
 		
+		if(root == null) {
+			return height;
+		}
 		
+		if(root.left != null) {
+			height++;
+			getHeight(root.left);
+		}
+		
+		if(root.right != null) {
+			height++;
+			getHeight(root.right);
+		}
 		
 		return height;
 	}
