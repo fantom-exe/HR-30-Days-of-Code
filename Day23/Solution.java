@@ -1,5 +1,7 @@
 package Day23;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 class Node{
@@ -11,8 +13,30 @@ class Node{
 	}
 }
 
-class Solution {
+public class Solution {
+	
 	static void levelOrder(Node root){
+		Queue<Node> levelOrder = new LinkedList<>();
+		
+		if(root == null) { // print
+			while(!levelOrder.isEmpty()) {
+				System.out.print(levelOrder.poll() + " ");
+			}
+		}
+		else {
+			levelOrder.add(root);
+			
+			if(root.left != null) {
+//			levelOrder.add(root.left);
+				levelOrder(root.left);
+			}
+			
+			if(root.right != null) {
+//			levelOrder.add(root.right);
+				levelOrder(root.right);
+			}
+			
+		}
 		
 	}
 	
