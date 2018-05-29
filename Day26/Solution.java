@@ -12,7 +12,12 @@ public class Solution {
 		
 		// input
 		for (int i = 0; i < 6; i++) {
+			if(!input.hasNextInt()) {
+			
+			}
 			int num = input.nextInt();
+			
+			System.out.println(num);
 			
 			if(i < 3) {
 				actualDate[i] = num;
@@ -25,17 +30,30 @@ public class Solution {
 		// calculate
 		int fine;
 		
-		if(actualDate[2] < dueDate[2]) { // actualDate[year] < dueDate[year]
+		if(actualDate[2] < dueDate[2]) { // actual year < due year
 			fine = 0;
 		}
-		else if(actualDate[2] == dueDate[2]) { // actualDate[year] == dueDate[year]
-			if(actualDate[1] <= dueDate[1]) { // actualDate[month] == dueDate[month]
-				if(actualDate[0] <= dueDate[0]) { 
+		else if(actualDate[2] == dueDate[2]) { // actual year == due year
+			if(actualDate[1] < dueDate[1]) { // actual month < due month
+				fine = 0;
+			}
+			if(actualDate[1] == dueDate[1]) { // actual month == due month
+				if(actualDate[0] <= dueDate[0]) { // actual day <= due day
 					fine = 0;
+				}
+				else { // actual day > due day
+					fine = 15 * (actualDate[0] - dueDate[0]);
+				}
+			}
+			if(actualDate[1] > dueDate[1]) { // actual month > due month
+				fine = 500 * (actualDate[1] - dueDate[1]);
+				
+				if(actualDate[0] > dueDate[0]) { // actual day > due day
+					fine += 15 * (actualDate[0] - dueDate[0]);
 				}
 			}
 		}
-		else { // actualDate[year] > dueDate[year]
+		else { // actual year > due year
 			fine = 10000;
 		}
 	

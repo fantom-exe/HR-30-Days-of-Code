@@ -1,4 +1,4 @@
-import Day25
+import Day26
 		.*;
 
 public class Main {
