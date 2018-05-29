@@ -22,18 +22,23 @@ public class Solution {
 			}
 		}
 		
-		int fine = 0;
 		// calculate
-		for (int i = 2; i >= 0; i--) {
-			
-			if(actualDate[i] <= dueDate[i]) {
-				fine = 0;
-			}
-			else if () {
-				
+		int fine;
+		
+		if(actualDate[2] < dueDate[2]) { // actualDate[year] < dueDate[year]
+			fine = 0;
+		}
+		else if(actualDate[2] == dueDate[2]) { // actualDate[year] == dueDate[year]
+			if(actualDate[1] <= dueDate[1]) { // actualDate[month] == dueDate[month]
+				if(actualDate[0] <= dueDate[0]) { 
+					fine = 0;
+				}
 			}
 		}
-		
+		else { // actualDate[year] > dueDate[year]
+			fine = 10000;
+		}
+	
 	}
 	
 }
