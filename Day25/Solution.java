@@ -15,14 +15,8 @@ public class Solution {
 			num = input.nextInt();
 			prime = true;
 			
-			if(num == 0) {
+			if(num == 1) {
 				prime = false;
-			}
-			else if(num == 1) {
-				prime = false;
-			}
-			else if(num == 2) {
-				prime = true;
 			}
 			else if(num == 3) {
 				prime = true;
@@ -31,7 +25,7 @@ public class Solution {
 				prime = false;
 			}
 			else {
-				for(long i = num / 2; i > 1; i--) {
+				for(long i = num / 2; i > 1; i /= 2) {
 					if(num % i == 0) {
 						prime = false;
 						break;
