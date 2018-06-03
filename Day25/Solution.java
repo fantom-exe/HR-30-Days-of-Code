@@ -8,13 +8,18 @@ public class Solution {
 		Scanner input = new Scanner(System.in);
 		
 		int runs = input.nextInt();
+		long num;
+		boolean prime;
 		
 		while(runs > 0) {
-			long num = input.nextInt();
-			boolean prime = true;
+			num = input.nextInt();
+			prime = true;
 			
 			if(num == 1) {
 				prime = false;
+			}
+			else if(num == 2) {
+				prime = true;
 			}
 			else if(num % 2 == 0) { // even number
 				prime = false;
