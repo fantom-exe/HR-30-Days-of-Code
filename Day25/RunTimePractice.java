@@ -61,10 +61,10 @@ public class RunTimePractice {
 	
 	public static void main(String[] args) {
 		long startTime = System.nanoTime();
-		findNumsOfRepetitions("abca", 'a');
+		findNumsOfRepetitions("abcalkjhsdfkljhasdflkjhsadklfjhsadklfjhsadkfljhsdfa", 'a');
 		long endTime   = System.nanoTime();
 		long duration = endTime - startTime;
-		System.out.println("Test " + duration + "ms");
+		System.out.println("Test " + duration + "ns");
 		
 		char[] a = {'a', 'b'};
 		
@@ -72,13 +72,13 @@ public class RunTimePractice {
 		findNumsOfRepetitionsv1("abcalkjhsdfkljhasdflkjhsadklfjhsadklfjhsadkfljhsdfa", a);
 		endTime   = System.nanoTime();
 		duration = endTime - startTime;
-		System.out.println("Test " + duration + "ms");
+		System.out.println("Test " + duration + "ns");
 		
 		startTime = System.nanoTime();
 		findNumsOfRepetitionsv2("abcalkjhsdfkljhasdflkjhsadklfjhsadklfjhsadkfljhsdfa", a);
 		endTime   = System.nanoTime();
 		duration = endTime - startTime;
-		System.out.println("Test " + duration + "ms");
+		System.out.println("Test " + duration + "ns");
 	}
 	
 }
