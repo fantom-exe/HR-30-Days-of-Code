@@ -18,6 +18,9 @@ public class Solution {
 			if(num == 1) {
 				prime = false;
 			}
+			else if(num == 2) {
+				prime = true;
+			}
 			else if(num == 3) {
 				prime = true;
 			}
@@ -25,7 +28,9 @@ public class Solution {
 				prime = false;
 			}
 			else {
-				for(long i = num / 2; i > 1; i /= 2) {
+			//  Given i <= sqrt(num)
+				//  if(num % i == 0) then num is not prime
+				for(long i = 2; i*i <= num; i++) {
 					if(num % i == 0) {
 						prime = false;
 						break;
