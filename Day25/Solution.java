@@ -10,7 +10,7 @@ public class Solution {
 		int runs = input.nextInt();
 		
 		while(runs > 0) {
-			int num = input.nextInt();
+			long num = input.nextInt();
 			boolean prime = true;
 			
 			if(num == 1) {
@@ -20,7 +20,7 @@ public class Solution {
 				prime = false;
 			}
 			else {
-				for(int i = num / 2; i > 1; i--) {
+				for(long i = num / 2; i > 1; i--) {
 					if(num % i == 0) {
 						prime = false;
 						break;
