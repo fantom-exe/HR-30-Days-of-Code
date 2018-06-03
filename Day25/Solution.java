@@ -15,10 +15,16 @@ public class Solution {
 			num = input.nextInt();
 			prime = true;
 			
-			if(num == 1) {
+			if(num == 0) {
+				prime = false;
+			}
+			else if(num == 1) {
 				prime = false;
 			}
 			else if(num == 2) {
+				prime = true;
+			}
+			else if(num == 3) {
 				prime = true;
 			}
 			else if(num % 2 == 0) { // even number
