@@ -20,23 +20,23 @@ public class Solution {
 
 	static class TestDataEmptyArray {
 		public static int[] get_array() {
-			// complete this function
+			return new int[0];
 		}
 	}
 
 	static class TestDataUniqueValues {
 		public static int[] get_array() {
-			// complete this function
+			return new int[] {4, 9, 6};
 		}
 
 		public static int get_expected_result() {
-			// complete this function
+			return 2;
 		}
 	}
 
 	static class TestDataExactlyTwoDifferentMinimums {
 		public static int[] get_array() {
-			// complete this function
+			
 		}
 
 		public static int get_expected_result() {
