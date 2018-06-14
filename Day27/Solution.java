@@ -26,21 +26,21 @@ public class Solution {
 
 	static class TestDataUniqueValues {
 		public static int[] get_array() {
-			return new int[] {4, 9, 6};
+			return new int[] {4, 9};
 		}
 
 		public static int get_expected_result() {
-			return 2;
+			return 0;
 		}
 	}
 
 	static class TestDataExactlyTwoDifferentMinimums {
 		public static int[] get_array() {
-			
+			return new int[] {2, 2, 5};
 		}
 
 		public static int get_expected_result() {
-			// complete this function
+			return 0;
 		}
 	}
 
