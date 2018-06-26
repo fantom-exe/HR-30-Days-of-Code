@@ -10,6 +10,7 @@ public class Solution {
 		int t = scanner.nextInt();
 		scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 		
+		String str;
 		Integer A, B;
 		int AandB;
 		
@@ -27,15 +28,19 @@ public class Solution {
 			int max = 0;
 			
 			for(int i = 1; i < N; i++) {
-				A = i;
-				B = i+1;
-				
-				for(int j = 0; j < i; j++) {
+				for(int j = i+1; j <= N; j++) {
+					A = i;
+					B = j;
 					
+					str = A.toBinaryString(A);
+					
+					
+					str = A.toBinaryString(B);
+					
+					
+					System.out.print(str);
 				}
-					AandB = A & B;
 				
-				System.out.print(AandB);
 			}
 			
 			
