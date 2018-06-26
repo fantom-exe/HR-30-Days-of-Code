@@ -10,9 +10,9 @@ public class Solution {
 		int t = scanner.nextInt();
 		scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 		
-		String str;
+		String binStrA, binStrB;
 		Integer A, B;
-		int AandB;
+		Integer AandB;
 		
 		for (int tItr = 0; tItr < t; tItr++) {
 			String[] nk = scanner.nextLine().split(" ");
@@ -32,13 +32,22 @@ public class Solution {
 					A = i;
 					B = j;
 					
-					str = A.toBinaryString(A);
-					
-					
-					str = A.toBinaryString(B);
-					
-					
-					System.out.print(str);
+//					binStrA = A.toBinaryString(A);
+//					binStrB = B.toBinaryString(B);
+//					for(int k = 0; k < binStrB.length(); k++) {
+//						A   = Integer.parseInt(binStrA.);
+//						B   = Integer.parseInt(k);
+						
+						AandB = A & B;
+						System.out.println(AandB);
+						System.out.println(AandB.toBinaryString(AandB));
+						
+						if() {
+						
+						}
+//					}
+				
+				
 				}
 				
 			}
@@ -51,3 +60,24 @@ public class Solution {
 		
 	}
 }
+
+class BinaryString {
+	
+	BinaryString(String string, Integer integer){
+		String binaryInteger = Integer.toBinaryString(integer);
+		
+		byte[] bytes = string.getBytes( );
+		for(int i = 0; i < bytes.length; i++) {
+			byte b = bytes[i];
+			// Perform a bitwise operation using byte and integer operands, save result as tmp:
+			int tmp = b | integer;
+			System.out.println(Integer.toBinaryString(b) + " OR " + Integer.toBinaryString(integer)
+					+ " = " + Integer.toBinaryString(tmp) + " = " + tmp);
+		}
+	}
+	
+	public static void main(String[] args) {
+		new BinaryString("HackerRank", 8675309);
+	}
+}
+
