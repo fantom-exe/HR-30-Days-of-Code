@@ -10,9 +10,7 @@ public class Solution {
 		int t = scanner.nextInt();
 		scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 		
-		String binStrA, binStrB;
-		Integer A, B;
-		Integer AandB;
+		Integer A, B, AandB;
 		
 		for (int tItr = 0; tItr < t; tItr++) {
 			String[] nk = scanner.nextLine().split(" ");
