@@ -32,52 +32,19 @@ public class Solution {
 					A = i;
 					B = j;
 					
-//					binStrA = A.toBinaryString(A);
-//					binStrB = B.toBinaryString(B);
-//					for(int k = 0; k < binStrB.length(); k++) {
-//						A   = Integer.parseInt(binStrA.);
-//						B   = Integer.parseInt(k);
-						
-						AandB = A & B;
-						System.out.println(AandB);
-						System.out.println(AandB.toBinaryString(AandB));
-						
-						if() {
-						
-						}
-//					}
-				
-				
-				}
-				
-			}
+					AandB = A & B;
+					
+					if(AandB > max && AandB < K) {
+						max = AandB;
+					}
+					
+				} // for j
+			} // for i
 			
-			
-		}
+			System.out.println(max);
+		} // for tItr
 		
 		scanner.close();
-		
-		
-	}
-}
-
-class BinaryString {
-	
-	BinaryString(String string, Integer integer){
-		String binaryInteger = Integer.toBinaryString(integer);
-		
-		byte[] bytes = string.getBytes( );
-		for(int i = 0; i < bytes.length; i++) {
-			byte b = bytes[i];
-			// Perform a bitwise operation using byte and integer operands, save result as tmp:
-			int tmp = b | integer;
-			System.out.println(Integer.toBinaryString(b) + " OR " + Integer.toBinaryString(integer)
-					+ " = " + Integer.toBinaryString(tmp) + " = " + tmp);
-		}
 	}
 	
-	public static void main(String[] args) {
-		new BinaryString("HackerRank", 8675309);
-	}
 }
-
